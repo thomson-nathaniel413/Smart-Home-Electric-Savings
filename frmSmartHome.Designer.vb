@@ -25,7 +25,7 @@ Partial Class frmSmartHome
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSmartHome))
         Me.picSmartHome = New System.Windows.Forms.PictureBox()
         Me.lblSmartHome = New System.Windows.Forms.Label()
-        Me.cmbMonths = New System.Windows.Forms.ComboBox()
+        Me.cboMonths = New System.Windows.Forms.ComboBox()
         Me.lblSavingsMonthly = New System.Windows.Forms.Label()
         Me.btnStats = New System.Windows.Forms.Button()
         Me.lblSavingsAverage = New System.Windows.Forms.Label()
@@ -53,14 +53,14 @@ Partial Class frmSmartHome
         Me.lblSmartHome.Text = "Smart Home Electric Savings"
         Me.lblSmartHome.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'cmbMonths
+        'cboMonths
         '
-        Me.cmbMonths.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbMonths.FormattingEnabled = True
-        Me.cmbMonths.Location = New System.Drawing.Point(521, 185)
-        Me.cmbMonths.Name = "cmbMonths"
-        Me.cmbMonths.Size = New System.Drawing.Size(121, 28)
-        Me.cmbMonths.TabIndex = 2
+        Me.cboMonths.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboMonths.FormattingEnabled = True
+        Me.cboMonths.Location = New System.Drawing.Point(521, 185)
+        Me.cboMonths.Name = "cboMonths"
+        Me.cboMonths.Size = New System.Drawing.Size(121, 28)
+        Me.cboMonths.TabIndex = 2
         '
         'lblSavingsMonthly
         '
@@ -114,7 +114,7 @@ Partial Class frmSmartHome
         Me.Controls.Add(Me.lblSavingsAverage)
         Me.Controls.Add(Me.btnStats)
         Me.Controls.Add(Me.lblSavingsMonthly)
-        Me.Controls.Add(Me.cmbMonths)
+        Me.Controls.Add(Me.cboMonths)
         Me.Controls.Add(Me.lblSmartHome)
         Me.Controls.Add(Me.picSmartHome)
         Me.Name = "frmSmartHome"
@@ -127,7 +127,7 @@ Partial Class frmSmartHome
 
     Friend WithEvents picSmartHome As PictureBox
     Friend WithEvents lblSmartHome As Label
-    Friend WithEvents cmbMonths As ComboBox
+    Friend WithEvents cboMonths As ComboBox
     Friend WithEvents lblSavingsMonthly As Label
     Friend WithEvents btnStats As Button
     Friend WithEvents lblSavingsAverage As Label
