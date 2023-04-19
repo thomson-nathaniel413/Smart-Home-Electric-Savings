@@ -64,13 +64,13 @@ Partial Class frmSmartHome
         '
         'lblSavingsMonthly
         '
-        Me.lblSavingsMonthly.AutoSize = True
         Me.lblSavingsMonthly.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSavingsMonthly.Location = New System.Drawing.Point(237, 460)
+        Me.lblSavingsMonthly.Location = New System.Drawing.Point(53, 460)
         Me.lblSavingsMonthly.Name = "lblSavingsMonthly"
-        Me.lblSavingsMonthly.Size = New System.Drawing.Size(188, 25)
+        Me.lblSavingsMonthly.Size = New System.Drawing.Size(681, 38)
         Me.lblSavingsMonthly.TabIndex = 3
         Me.lblSavingsMonthly.Text = "lblSavingsMonthly"
+        Me.lblSavingsMonthly.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'btnStats
         '
@@ -86,23 +86,23 @@ Partial Class frmSmartHome
         '
         'lblSavingsAverage
         '
-        Me.lblSavingsAverage.AutoSize = True
         Me.lblSavingsAverage.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSavingsAverage.Location = New System.Drawing.Point(258, 616)
+        Me.lblSavingsAverage.Location = New System.Drawing.Point(58, 609)
         Me.lblSavingsAverage.Name = "lblSavingsAverage"
-        Me.lblSavingsAverage.Size = New System.Drawing.Size(193, 25)
+        Me.lblSavingsAverage.Size = New System.Drawing.Size(676, 32)
         Me.lblSavingsAverage.TabIndex = 5
         Me.lblSavingsAverage.Text = "lblSavingsAverage"
+        Me.lblSavingsAverage.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'lblSavingsBest
         '
-        Me.lblSavingsBest.AutoSize = True
         Me.lblSavingsBest.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSavingsBest.Location = New System.Drawing.Point(258, 665)
+        Me.lblSavingsBest.Location = New System.Drawing.Point(58, 664)
         Me.lblSavingsBest.Name = "lblSavingsBest"
-        Me.lblSavingsBest.Size = New System.Drawing.Size(155, 25)
+        Me.lblSavingsBest.Size = New System.Drawing.Size(676, 26)
         Me.lblSavingsBest.TabIndex = 6
         Me.lblSavingsBest.Text = "lblSavingsBest"
+        Me.lblSavingsBest.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'frmSmartHome
         '
@@ -121,7 +121,6 @@ Partial Class frmSmartHome
         Me.Text = "Smart Home Application"
         CType(Me.picSmartHome, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 

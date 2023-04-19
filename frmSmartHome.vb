@@ -8,6 +8,9 @@
         ' form load
         ' should read data from the .txt file, and create + populate array
 
+        ' hide statistics button
+        btnStats.Visible = False
+
         ' use this if savings.txt isn't found despite being in the correct location
         ' MsgBox(CurDir())
 
@@ -50,5 +53,15 @@
 
     Private Sub cboMonths_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMonths.SelectedIndexChanged
         ' user changed selected month
+
+        ' variable instantiation
+        Dim intSelectedMonthIndex As Integer
+        intSelectedMonthIndex = cboMonths.SelectedIndex
+
+        ' display proper output as per selected input
+        lblSavingsMonthly.Text = "The electric savings for " & _strSavings(intSelectedMonthIndex) & " is $" & _decBill(intSelectedMonthIndex)
+
+        ' show statistics button
+        btnStats.Visible = True
     End Sub
 End Class
