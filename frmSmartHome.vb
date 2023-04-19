@@ -64,4 +64,54 @@
         ' show statistics button
         btnStats.Visible = True
     End Sub
+
+    Private Sub btnStats_Click(sender As Object, e As EventArgs) Handles btnStats.Click
+        ' stats button is clicked
+        ComputeAverage()
+        ComputeMaxSavings()
+    End Sub
+
+    Private Sub ComputeMaxSavings()
+        ' function for computing the highest savings amount
+
+        ' variable instantiation
+        Dim strCurrentHighest As String = _strSavings(0)
+        Dim decCurrentHighest As Decimal = _decBill(0)
+        Dim intLoop As Integer
+
+        ' iterate over savings array
+        For intLoop = 1 To (_decBill.Length - 1)
+            ' if a new max is found...
+            If (_decBill(intLoop) > decCurrentHighest) Then
+                ' ...set it as current highest
+                strCurrentHighest = _strSavings(intLoop)
+                decCurrentHighest = _decBill(intLoop)
+            End If
+        Next
+
+        ' after the for loop, the current highest should be the absolute highest
+        lblSavingsBest.Text = strCurrentHighest & " had the highest overall savings."
+    End Sub
+
+    Private Sub ComputeAverage()
+        ' function for computing the average savings for the year
+
+        ' variable instantiation
+        Dim decCurrentSum As Decimal
+        Dim intCurrentTally As Integer = 0
+        Dim decAverage As Decimal
+
+        ' iterate over savings array
+        For intLoop = 0 To (_decBill.Length - 1)
+            ' add current savings amount to sum total
+            decCurrentSum += _decBill(intLoop)
+            ' increment tally
+            intCurrentTally += 1
+        Next
+
+        ' calculate average
+        decAverage = decCurrentSum / Convert.ToDecimal(intCurrentTally)
+        ' display average
+        lblSavingsAverage.Text = "Average monthly savings were: " & decAverage.ToString("C2")
+    End Sub
 End Class
